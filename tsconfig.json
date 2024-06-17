@@ -1,13 +1,29 @@
 {
-  "extends": "@vue/tsconfig/tsconfig.json",
   "compilerOptions": {
-    "sourceMap": true,
-    "baseUrl": ".",
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "jsx": "preserve",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "lib": ["ESNext", "DOM"],
+    "skipLibCheck": true,
+    "allowJs": true,
+    "noEmit": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "baseUrl": "./",
     "paths": {
-      "@/*": ["./src/*"]
-    },
-    "lib": ["esnext", "dom"],
-    "types": ["@dcloudio/types"]
+      "@": ["src"],
+      "@/*": ["src/*"],
+      "#/*": ["types/*"]
+    }
   },
-  "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
+  "include": ["src/**/*.vue", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "types/**/*.d.ts", "types/**/*.ts"],
+  "references": [{ "path": "./tsconfig.node.json" }],
+  "exclude": ["node_modules", "dist"]
 }
