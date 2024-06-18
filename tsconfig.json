@@ -21,7 +21,8 @@
       "@": ["src"],
       "@/*": ["src/*"],
       "#/*": ["types/*"]
-    }
+    },
+    "types": ["@dcloudio/types", "nutui-uniapp/global.d.ts"]
   },
   "include": ["src/**/*.vue", "src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "types/**/*.d.ts", "types/**/*.ts"],
   "references": [{ "path": "./tsconfig.node.json" }],

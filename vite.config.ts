@@ -28,13 +28,13 @@ export default defineConfig({
     }),
     uni(),
   ],
-  // css: {
-  //   preprocessorOptions: {
-  //     scss: {
-  //       additionalData: `@import "nutui-uniapp/styles/variables.scss";`,
-  //     },
-  //   },
-  // },
+  css: {
+    preprocessorOptions: {
+      scss: {
+        additionalData: `@import "nutui-uniapp/styles/variables.scss";`,
+      },
+    },
+  },
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "src"),

@@ -3,6 +3,7 @@ import { onLaunch, onShow, onHide } from "@dcloudio/uni-app"
 import dayjs from "dayjs"
 import "dayjs/locale/zh-cn"
 import { getAppEnvConfig } from "./utils/env"
+
 dayjs.locale("zh-cn")
 
 onLaunch(() => {
@@ -25,7 +26,9 @@ let globalData: UniGlobalData = {
     zwDebug: 1,
   },
 }
-uni.hideTabBar()
+// uni.hideTabBar()
 defineExpose({ globalData, _CONFIG: globalData._CONFIG })
 </script>
-<style></style>
+<style lang="scss">
+@import "nutui-uniapp/styles/index.scss";
+</style>
